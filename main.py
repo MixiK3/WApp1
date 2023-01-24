@@ -57,7 +57,7 @@ def send_whatsapp_msg():
     driver = webdriver.Chrome()
     try:
         driver.get(url='https://web.whatsapp.com/')
-        sleep(20)
+        sleep(21)
         for i in range(1, count + 1):
             # Тут идет проверка есть ли архив в вотсапе, чтобы указать правильный путь до контакта
             try:
