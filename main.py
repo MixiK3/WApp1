@@ -36,7 +36,7 @@ def home():
             )
             db.session.add(new_mailing)
             db.session.commit()
-            flash('Успешно сохранено.')
+            flash('Успешно сохранено в базу данных. Теперь можно начать рассылку.')
         else:
             flash('Колличество контактов, должно быть числом.')
             return redirect(url_for('home'))
