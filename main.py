@@ -36,9 +36,9 @@ def home():
             )
             db.session.add(new_mailing)
             db.session.commit()
-            flash('Успешно сохранено в базу данных. Теперь можно начать рассылку.')
+            flash('Успешно сохранено в базу данных. Теперь можно начать рассылку.','success')
         else:
-            flash('Колличество контактов, должно быть числом.')
+            flash('Колличество контактов, должно быть числом.', 'error')
             return redirect(url_for('home'))
     return render_template("index.html")
 
@@ -51,7 +51,7 @@ def send_whatsapp_msg():
         text = last_mail.text
         count = last_mail.count
     except AttributeError:
-        flash('В базе данных нет ни одной записи.')
+        flash('В базе данных нет ни одной записи.', 'error')
         return redirect(url_for('home'))
 
     driver = webdriver.Chrome()

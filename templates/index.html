@@ -12,22 +12,21 @@
 
 <body>
 <div class="box">
-    <h1>Whatsapp mailing</h1>
-    {% with messages = get_flashed_messages() %}
+    <h1>WhatsApp</h1>
+    {% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
-    {% for message in messages %}
-    <p class="red">{{ message }}</p>
-
+    {% for category,message in messages %}
+    <p class="{{ category }}">{{ message }}</p>
     {% endfor %}
     {% endif %}
     {% endwith %}
     <form action="{{ url_for('home') }}" method="post">
         <input type="text" name="text" placeholder="Text" required="required"/>
         <input type="text" name="count" placeholder="Count" required="required"/>
-        <button type="submit" class="btn btn-primary btn-block btn-large">Save in Data base</button>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Сохранить в базу данных</button>
     </form>
     <form action="{{ url_for('send_whatsapp_msg') }}">
-        <button type="submit" class="btn btn-primary btn-block btn-large">Start mailing</button>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Начать рассылку</button>
     </form>
 </div>
 

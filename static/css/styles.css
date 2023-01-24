@@ -30,11 +30,12 @@ a {
     text-decoration: none;
     text-align: center;
 }
-.red {
-    color: #ee6f57;
-    text-align: center;
+
+.error {
+color: #D63232;
+text-align: center;
 }
-.green {
+.success {
     color: green;
     text-align: center;
 }
