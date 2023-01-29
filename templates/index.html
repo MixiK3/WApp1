@@ -21,8 +21,8 @@
     {% endif %}
     {% endwith %}
     <form action="{{ url_for('home') }}" method="post">
-        <input type="text" name="text" placeholder="Text" required="required"/>
-        <input type="text" name="count" placeholder="Count" required="required"/>
+        <input type="text" name="text" placeholder="Текст рассылки" required="required"/>
+        <input type="text" name="count" placeholder="Колличество контактов" required="required"/>
         <button type="submit" class="btn btn-primary btn-block btn-large">Сохранить в базу данных</button>
     </form>
     <form action="{{ url_for('send_whatsapp_msg') }}">

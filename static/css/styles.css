@@ -40,7 +40,7 @@ text-align: center;
     text-align: center;
 }
 .box {
-	position: absolute;
+	position: absolute ;
 	top: 50%;
 	left: 50%;
 	margin: -150px 0 0 -150px;
