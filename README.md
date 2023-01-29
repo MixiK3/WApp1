@@ -1,1 +1,19 @@
-# WApp1
+# Flask Web App Tutorial
+
+## Installation
+
+Make sure you have the latest version of Python installed.
+
+```bash
+pip install -r requirements.txt
+```
+
+## Running The App
+
+```bash
+python app.py
+```
+
+## Viewing The App
+
+Go to `http://127.0.0.1:5000`
