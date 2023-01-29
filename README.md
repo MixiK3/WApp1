@@ -1,8 +1,8 @@
-# Flask Web App Tutorial
+# Учебное пособие по веб-приложению Flask
 
-## Installation
+## Установка
 
-Make sure you have the latest version of Python installed.
+Убедитесь, что у вас установлена последняя версия Python.
 
 ```bash
 pip install -r requirements.txt
@@ -14,6 +14,6 @@ pip install -r requirements.txt
 python app.py
 ```
 
-## Viewing The App
+## Просмотр Приложения
 
 Go to `http://127.0.0.1:5000`
