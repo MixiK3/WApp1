@@ -8,7 +8,7 @@
 pip install -r requirements.txt
 ```
 
-## Running The App
+## Запуск приложения
 
 ```bash
 python app.py
@@ -16,4 +16,4 @@ python app.py
 
 ## Просмотр Приложения
 
-Go to `http://127.0.0.1:5000`
+Идти к `http://127.0.0.1:5000`
