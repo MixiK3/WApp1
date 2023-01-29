@@ -13,6 +13,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
+
 # Создание таблицы в базе данных
 class Whatsapp_mailing(db.Model):
     __tablename__ = 'whatsapp_mails'
@@ -36,7 +37,7 @@ def home():
             )
             db.session.add(new_mailing)
             db.session.commit()
-            flash('Успешно сохранено в базу данных. Теперь можно начать рассылку.','success')
+            flash('Успешно сохранено в базу данных. Теперь можно начать рассылку.', 'success')
         else:
             flash('Колличество контактов, должно быть числом.', 'error')
             return redirect(url_for('home'))
@@ -54,6 +55,8 @@ def send_whatsapp_msg():
         flash('В базе данных нет ни одной записи.', 'error')
         return redirect(url_for('home'))
 
+
+    # Создание драйвера для управления браузера Chrome
     driver = webdriver.Chrome()
     try:
         driver.get(url='https://web.whatsapp.com/')
