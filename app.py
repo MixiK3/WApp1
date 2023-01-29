@@ -54,6 +54,7 @@ def send_whatsapp_msg():
         flash('В базе данных нет ни одной записи.', 'error')
         return redirect(url_for('home'))
 
+# Создание драйвера для управления браузера Chrome
     driver = webdriver.Chrome()
     try:
         driver.get(url='https://web.whatsapp.com/')
